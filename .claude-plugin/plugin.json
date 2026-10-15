@@ -1,5 +1,5 @@
 {
-  "name": "cue",
+  "name": "cue-prompt",
   "displayName": "Cue",
   "version": "1.0.0",
   "description": "Score and improve AI prompts before you send them.",
@@ -7,5 +7,7 @@
     "name": "Sean Finlay",
     "url": "https://cue-prompt.com"
   },
-  "homepage": "https://cue-prompt.com"
+  "homepage": "https://cue-prompt.com",
+  "privacyPolicyUrl": "https://cue-prompt.com/privacy",
+  "icon": ".claude-plugin/assets/icon.png"
 }
