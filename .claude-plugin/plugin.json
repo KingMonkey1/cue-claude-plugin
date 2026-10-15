@@ -1,0 +1,11 @@
+{
+  "name": "cue",
+  "displayName": "Cue",
+  "version": "1.0.0",
+  "description": "Score and improve AI prompts before you send them.",
+  "author": {
+    "name": "Sean Finlay",
+    "url": "https://cue-prompt.com"
+  },
+  "homepage": "https://cue-prompt.com"
+}
