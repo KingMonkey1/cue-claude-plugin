@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "cue": {
+      "url": "https://cue-mcp-production.up.railway.app/mcp"
+    }
+  }
+}
