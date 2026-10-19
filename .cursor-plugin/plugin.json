@@ -1,0 +1,15 @@
+{
+  "name": "cue-prompt",
+  "version": "1.0.0",
+  "description": "Score and improve AI prompts with Cue account access, feedback and intent-preserving rewrites.",
+  "author": {
+    "name": "Sean Finlay",
+    "email": "support@cue-prompt.com"
+  },
+  "homepage": "https://cue-prompt.com",
+  "repository": "https://github.com/KingMonkey1/cue-claude-plugin",
+  "license": "LicenseRef-Proprietary",
+  "logo": ".claude-plugin/assets/icon.png",
+  "mcpServers": "mcp.json",
+  "skills": "skills"
+}
