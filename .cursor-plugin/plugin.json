@@ -11,5 +11,5 @@
   "license": "LicenseRef-Proprietary",
   "logo": ".claude-plugin/assets/icon.png",
   "mcpServers": "mcp.json",
-  "skills": "skills"
+  "skills": "integrations/cursor/skills"
 }
