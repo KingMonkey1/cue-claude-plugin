@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.KingMonkey1/cue",
+  "title": "Cue",
+  "description": "Score and improve AI prompts with feedback, intent-preserving rewrites and Cue account access.",
+  "version": "0.3.6",
+  "websiteUrl": "https://cue-prompt.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://cue-mcp-production.up.railway.app/mcp"
+    }
+  ]
+}
