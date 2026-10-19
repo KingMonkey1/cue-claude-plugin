@@ -3,7 +3,7 @@
   "name": "io.github.KingMonkey1/cue",
   "title": "Cue",
   "description": "Score and improve AI prompts with feedback, intent-preserving rewrites and Cue account access.",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "websiteUrl": "https://cue-prompt.com",
   "remotes": [
     {
