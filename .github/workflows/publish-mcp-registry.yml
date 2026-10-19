@@ -1,0 +1,35 @@
+name: Publish Cue to MCP Registry
+on:
+  push:
+    branches: [main]
+    paths:
+      - integrations/server.json
+      - .github/workflows/publish-mcp-registry.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: cue-mcp-registry
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download reviewed registry metadata
+        env:
+          COMMIT: ${{ github.sha }}
+        run: |
+          curl --fail --silent --show-error --location "https://raw.githubusercontent.com/KingMonkey1/cue-claude-plugin/$COMMIT/integrations/server.json" -o server.json
+      - name: Install official publisher with checksum verification
+        run: |
+          curl --fail --silent --show-error --location "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz" -o publisher.tar.gz
+          echo "a06c9096dcb9727c13555b6be26c7effa707b01f06a4c561ba7a3635443cf2cc  publisher.tar.gz" | sha256sum --check
+          tar xzf publisher.tar.gz mcp-publisher
+      - name: Validate metadata
+        run: ./mcp-publisher validate server.json
+      - name: Authenticate using temporary GitHub identity
+        run: ./mcp-publisher login github-oidc
+      - name: Publish hosted Cue service metadata
+        run: ./mcp-publisher publish server.json
